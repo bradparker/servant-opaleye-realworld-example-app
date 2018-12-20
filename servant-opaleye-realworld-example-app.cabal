@@ -1,0 +1,31 @@
+name:                servant-opaleye-realworld-example-app
+version:             0.1.0.0
+license:             BSD3
+license-file:        LICENSE
+author:              Brad Parker
+maintainer:          hi@bradparker.com
+build-type:          Simple
+extra-source-files:  ChangeLog.md
+cabal-version:       >=1.10
+
+executable servant-opaleye-realworld-example-app
+  main-is:
+    Main.hs
+  other-modules:
+    Articles.Database
+    Articles.Database.Article
+    Articles.Database.DecoratedArticle
+    Articles.Database.Favorite
+    Articles.Database.Tag
+    Users.Database
+  build-depends:
+    base >=4.11 && <4.12,
+    generic-lens,
+    lens,
+    opaleye,
+    product-profunctors,
+    text
+  hs-source-dirs:
+    src
+  default-language:
+    Haskell2010
